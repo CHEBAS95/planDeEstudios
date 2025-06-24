@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción de Mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adopción de Mascotas</h1>
+        
+        <div class="persona-form">
+            <h2>Registrar Persona</h2>
+            <input type="text" id="personaName" placeholder="Nombre de la persona" />
+            <input type="number" id="personaAge" placeholder="Edad de la persona" />
+            <button onclick="crearPersona()">Crear Persona</button>
+        </div>
+
+        <div class="mascotas-list">
+            <h2>Mascotas Disponibles</h2>
+            <ul id="mascotasDisponibles">
+                <!-- Lista de mascotas disponibles -->
+            </ul>
+        </div>
+
+        <div class="mascota-info">
+            <h2>Detalles de la Mascota</h2>
+            <div id="detalleMascota">
+                <!-- Detalles de la mascota seleccionada -->
+            </div>
+            <button id="adoptarBtn" style="display:none;" onclick="adoptarMascota()">Adoptar Mascota</button>
+        </div>
+
+        <div class="mascotas-adoptadas">
+            <h2>Mascotas Adoptadas</h2>
+            <ul id="mascotasAdoptadas">
+                <!-- Mascotas adoptadas -->
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

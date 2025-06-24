@@ -1,0 +1,16 @@
+sabado
+1:https://www.youtube.com/watch?v=yB4n_K7dZV8
+min : 2.0021 check 
+
+2: 
+	*exprexx API : https://www.youtube.com/watch?v=YmZE1HXjpd4
+	
+	min:9:30///middelaware dissabel x pweres ,restclient 
+	*https://expressjs.com/en/starter/hello-world.html
+
+	hoja :
+3:
+	*https://www.youtube.com/watch?v=-9d3KhCqOtU
+  	min: 50:50
+	zod
+, midelware, creadror idcrypto,reqparams y reqbody

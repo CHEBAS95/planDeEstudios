@@ -1,0 +1,11 @@
+body{
+  background-image: radial-gradient(rgba(37, 66, 29, 0.58) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-color: #020202;
+}
+
+p{
+  color: white;
+  font-size: larger;
+  text-align: center;
+}

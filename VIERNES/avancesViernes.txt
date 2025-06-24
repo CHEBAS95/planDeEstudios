@@ -1,0 +1,14 @@
+hacer la ruta de estudio css de manz.dev
+introduccion : check
+unidades : check
+modelo de cajas : check
+bordes :check (revisar bordes con imagenes )
+colores :check
+variables : check
+calculos : check
+logica : checck
+selectores : check
+psedudoclases: 
+tipografias y fuentes
+flex : check
+	(ver video de flex con la baraja)

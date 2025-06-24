@@ -1,0 +1,44 @@
+
+class Node {
+  constructor(data,linked){
+    this.data = data;
+    this.linked = null;
+  }
+}
+
+
+class LinkedList {
+  constructor() {
+    this.head = null;  // La lista comienza vacía
+  }
+
+  insert(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;  // Si la lista está vacía, el nuevo nodo es la cabeza
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;  // Recorremos hasta el último nodo
+      }
+      current.next = newNode;  // Agregamos el nuevo nodo al final
+    }
+  }
+
+  print() {
+    let current = this.head;
+    let result = "";
+    while (current) {
+      result += `[${current.data}] -> `;
+      current = current.next;
+    }
+    console.log(result + "null");
+  }
+}
+
+// ✅ Prueba la implementación:
+const list = new LinkedList();
+list.insert(10);
+list.insert(20);
+list.insert(30);
+list.print();  // [10] -> [20] -> [30] -> null

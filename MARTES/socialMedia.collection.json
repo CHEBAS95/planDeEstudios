@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "67ac16ca45f6e392ec5275ec"
+  },
+  "name": "Luis",
+  "surname": "Martinez",
+  "password": "password123",
+  "avatar": "avatar_url_4",
+  "post": "¡Hola a todos!",
+  "yourReaction": {
+    "postLikes": 3,
+    "postDislike": 0
+  },
+  "theirPost": {
+    "postLikes": 1,
+    "postDislike": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "67ac16ca45f6e392ec5275ed"
+  },
+  "name": "Maria",
+  "surname": "Rodriguez",
+  "password": "password456",
+  "avatar": "avatar_url_5",
+  "post": "Este es mi post.",
+  "yourReaction": {
+    "postLikes": 5,
+    "postDislike": 1
+  },
+  "theirPost": {
+    "postLikes": 2,
+    "postDislike": 1
+  }
+}]

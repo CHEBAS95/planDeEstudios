@@ -1,0 +1,18 @@
+lunes =https://www.youtube.com/watch?v=EmxvMPcIy5c&t=2156s
+
+pendiente=https://www.youtube.com/watch?v=95BFumHfwAA
+
+cors :https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+gemini : proyecto de consumo de apis 
+terminado fecth api
+
+creacion de nueva funcion getDataPoke queda pendiente terminarla 
+
+Puntos de Mejora:
+Manejo de errores en la interfaz de usuario: Actualmente, los errores se muestran en la consola. Sería mejor mostrar mensajes de error amigables en la interfaz de usuario para mejorar la experiencia del usuario.
+Limpieza de elementos: cuando se llama a la api de chistes, los chistes se acumulan, seria bueno limpiar el contenedor antes de agregar un nuevo chiste.
+Mejorar la funcion getDataPoke: actualmente solo muestra alertas, seria bueno que mostrara la informacion del pokemon en la interfaz de usuario.
+Reutilizacion de codigo: la funcion createElement se encuentra dentro de la funcion getJoke, seria bueno que estuviera fuera para poder reutilizarla.
+Manejo de asincronia: la funcion getDataPoke no maneja la asincronia de la peticion a la api, seria bueno que lo hiciera.
+Accesibilidad: Asegúrate de que tu sitio web sea accesible para todos los usuarios, incluyendo aquellos con discapacidades. Esto implica usar etiquetas HTML semánticas, proporcionar texto alternativo para las imágenes y asegurarte de que el sitio web sea navegable con el teclado.
