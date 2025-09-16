@@ -1,4 +1,4 @@
-// const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 // // let edad = 0;
 // // for (i = 1995; i <= 2024; i++) {
 // //   let text = "feliz cumpleaños ";
@@ -19,21 +19,21 @@
 // //   console.log(i);
 // // }
 // //--primos por rango -----------
-// // let number = +prompt("ingresa el numero a detectar primos: ");
-// // console.log("el numero es ", number);
+// let number = +prompt("ingresa el numero a detectar primos: ");
+// console.log("el numero es ", number);
 
-// // let count = 0;
+// let count = 0;
 
-// // for (let i = 0; i <= number; i++) {
-// //   if (number % i === 0) {
-// //     count++;
-// //   }
-// // }
+// for (let i = 0; i <= number; i++) {
+//   if (number % i === 0) {
+//     count++;
+//   }
+// }
 
-// // if (count === 2) {
-// //   console.log(`el ${number} es primo`);
-// // }
-// //----min de dos numeros ---------
+// if (count === 2) {
+//   console.log(`el ${number} es primo`);
+// }
+// // //----min de dos numeros ---------
 // // let numA = +prompt("ingrese el numero primero: ");
 // // let numB = +prompt("ingrese el segundo nuemro:  ");
 
@@ -186,18 +186,54 @@
 // console.log("La suma de los numeros es:", sumOfNumbers);
 
 
-let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
 
-function aclean(arr){
-  let map = new Map();
-  for (const element of arr) {
-    let sorted = element.toLowerCase().split("").sort().join("");
-    map.set(sorted, element)
-    console.log(sorted);
-  }
-  return  Array.from(map.values())
+// function aclean(arr){
+//   let map = new Map();
+//   for (const element of arr) {
+//     let sorted = element.toLowerCase().split("").sort().join("");
+//     map.set(sorted, element)
+//     console.log(sorted);
+//   }
+//   for (const element of map) {
+    
+//     console.log(`mapa con duplicados ${element}`);
+//   }
   
-}
+//   return  Array.from(map.values())
+  
+// }
 
-console.log(aclean(arr) );
+// console.log(aclean(arr) );
+//------DESSTRUCTTURAACION -----------
+let user = {
+  name: "John",
+  years: 30
+};
+
+let {name, years : age, isAdmin =false} = user
+
+console.log(age);
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+function topSalaries(obj){
+ let maxSalarie = 0 ;
+let maxName = null ;
+
+for (const [name, salarie] of Object.entries(obj)) {
+  if(maxSalarie < salarie){
+    maxName = name;
+    maxSalarie = salarie
+  }
+  return maxName
+}
+ 
+};
+
+
+console.log(topSalaries(salaries));

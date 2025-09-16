@@ -5,3 +5,6 @@ array por mi mismo
 ----
 realizando ejercicios por mi mismo puestos
 por chat gpt
+26/26/2025
+-implemntado el front end a ejercicio de pilas y colas 
+-practica balanceo de parentesis,

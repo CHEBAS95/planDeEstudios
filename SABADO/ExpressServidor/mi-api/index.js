@@ -4,7 +4,10 @@ const fs = require('fs');
 const crypto = require("node:crypto")
 const app = express();
 const PORT = 3000;
-const zod = require('zod');
+// import { error } from "node:console";
+const {validatorMovie, pactMovie} = require("./schemaMovie");
+const { error } = require("node:console");
+
 
 const moviesAll = path.join(__dirname,"movies.json")
 let arrMovies = [];
@@ -37,14 +40,18 @@ app.get("/movies", (req, res) => {
 
   // Filtrar por género
   if (genre) {
-    console.log("Buscando por género");
+    console.log(Array.isArray(moviesAll)); // false -> ¡problema aquí!
+console.log(Array.isArray(arrMovies)); // true -> este es el que deberías usar
 
-    filteredMovies = filteredMovies.filter(movie =>
-      movie.genre.some(g => g.toLowerCase() === genre.toLowerCase())
-    );
-    console.log(filteredMovies)
+    console.log(`filtrando por :${genre}`);
+  //   const filteredMoviesGenre = arrMovies.filter(movie =>
+  // movie.genre.includes(genre)
+//);
+  const filteredMovies= arrMovies.filter(
+    movie => movie.genre.some(g => g.toLowerCase() === genre.toLowerCase())
+  )
+   return res.json(filteredMovies)
   } 
-
   // Filtrar por año
   if (year) {
     console.log("Buscando por año");
@@ -76,31 +83,20 @@ app.get("/movies/:id",(req, res)=>{
 })
 
 app.post("/movies",(req, res)=>{
-  const {
-    title,
-    year, 
-    director,
-    duraction,
-    poster,
-    genre,
-    rate
-  }=req.body
+ const result =  validatorMovie(req.body);
 
-  const newMovie = zod.object({
-    title: zod.string({
-      invalid_type_error : "title must be a string"
-  }),
+ if (result.error) {
+  const msg =JSON.parse( result.error.message)
+  return res.status(400).json({
+    message : "error al crear la pelicula",
+    error : msg,
+    code : 400
   })
-
+ }
+ 
    newMovie = {
     id: crypto.randomUUID(),
-    title,
-    year, 
-    director,
-    duraction,
-    poster,
-    genre,
-    rate
+    ...result.data
   };
   console.log(newMovie);
 
@@ -113,6 +109,45 @@ app.post("/movies",(req, res)=>{
   })
   
   
+})
+
+app.patch("/movies/:id", (req,res)=>{
+  const id = req.params.id;
+
+  const movieRepair = arrMovies.findIndex(movie=>movie.id === id);
+
+  if(movieRepair === -1){
+    console.log("error");
+    res.status(404).json({
+      massage : "pelicula no encontrada",
+      code : 404
+    })
+  }
+
+  const result = pactMovie(req.body);
+
+  if(!result.success){
+    return res.status(400).json({
+      message : "Datos insalidos",
+      error : result.error
+    })
+  }
+
+  try {
+    const updaeMovie = {
+      ...arrMovies[movieRepair],
+      ...result.data
+    };
+
+    arrMovies[movieRepair] = updaeMovie; 
+
+    return res.status(201).json({
+      message : "Pelicula Actualizada correctamente",
+      movie : updaeMovie
+  })
+  } catch (error) {
+    res.json(result.error)
+  }
 })
 
 

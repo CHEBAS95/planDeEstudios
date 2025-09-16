@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <title>parentesis</title>
+</head>
+
+<body>
+  <header>
+    <h1>Tutorial y exercises of pogramming</h1>
+    <br>
+    <div class="header">
+      <ul>
+        <li><button><a href="index.html">Listas y Colas</a></button></li>
+        <li><button><a href="parentesis.html">balanceo de parentesis</a></button></li>
+        <li></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>♎Balanceo de parentesis</h1>
+    <div id="input-group">
+    <input type="text" name="text-balance" id="balance"
+      placeholder="ingresa el texto para verificar el balanceo de ()[]{}">
+    </div>
+
+    <div class="visualization parentesis" id="stackParentesis">
+      <div class="empty-state">Stack vacío - Añade elementos con Push</div>
+    </div>
+
+    <div class="info">
+        <h3>ℹ️ Información del Stack:</h3>
+        <p><strong>Tamaño:</strong> <span id="stackSize">0</span></p>
+        <p><strong>Vacío:</strong> <span id="stackEmpty">Sí</span></p>
+        <p><strong>elemntos faltantes</strong> <span id="missingElements">N/A</span></p>
+    </div>
+
+    <div class="console" id="stackConsole">
+      <div class="console-line">🚀 Stack Console - Listo para usar</div>
+      </div>
+  </div>
+
+  <script type="module" src="../scripts/parentesis.js"></script>
+</body>
+
+</html>

@@ -1,83 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta name="SebasEspinosaDevJs" content="esta pagina esta diseñada para describir la familia ">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="SebasEspinosaDevJs">
   <meta name="description"
     content="plantilla que describe la fmailia y podras compartir la pagina con tus seres queridos uwu">
-  <meta charset="UFT-8">
   <link rel="family icon" href="./img/iconos/familia-icon.icon.png" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
 
   <title>my Famili</title>
 </head>
 
 <body>
-  <header class="header">
+ <header class="header" role="banner">
     <div class="logo">
-      <img src="./img/logoEspinosa.png" alt="logo familia">
-      <div class="primary-text">
-        <p>Familia Espinosa</p>
-      </div>
+      <img src="./img/logoEspinosa.png" alt="Logo de la Familia Espinosa" width="100" height="100">
+      <h1 class="primary-text">Familia Espinosa</h1>
     </div>
-    <div class="buttonsHeader">
-      <div>
-        <button type="button">
-          <img src="./img/iconos/casablanca.png" alt="home">
-
-          <p>inicio</p>
-        </button>
-        <button>
-          <img src="./img/iconos/lupablanca.png" alt="buscar">
-          <p>buscar</p>
-        </button>
-        <button>
-          <a href="/pages/practiceCss.html">Css</a>
-        </button>
-      </div>
-    </div>
-
     
-    <div class="main-menu">
-      <ul>
-        <li>familia</li>
-        <ul class="list_down">
-          <p>integrantes :</p>
-          <li>eglu</li>
-          <li>noris</li>
-          <li>diana</li>
-          <li>SebasEspinosaDevJs</li>
-          <li>michael</li>
-          <li>mathew</li>
-          <li>nicole</li>
-
-        </ul>
-        <li>historia</li>
-        <li>mascotas</li>
-        <ul>
-          <li>aves</li>
-          <ul>
-            <li>carlota</li>
-            <li>pancha</li>
-          </ul>
-          <li>perros</li>
-          <li>gatos</li>
-          <ul>
-            <li>kiris</li>
-            <li>mimisita</li>
-            <li>manchones</li>
-          </ul>
-          <li>otros</li>
-        </ul>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#familia">Familia</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#mascotas">Mascotas</a></li>
       </ul>
-    </div>
-
+    </nav>
   </header>
 
 
   <main>
-    <div class="main">
+    <div class="main-content">
       <div class="history">
         Aca va la historia proximamente.
       </div>
@@ -95,7 +49,7 @@
       <div>
         <h3>¿Tienes Dudas ?</h3>
         <p>envianos un mensaje </p>
-        <form action="./index.html" method="post" target="_top" name="require_info">
+        <form action="" id="contact-form" method="post" target="_top" name="require_info">
           <ul>
             <li>
               <label for="user_name">Nombre</label>
@@ -128,7 +82,7 @@
     </div>
 
   </main>
-  <footer>
+  <footer class="footer" role="contentinfo">
     <div class="footer_left">
       <div>
         <p>desarrollado por :</p>
@@ -151,7 +105,7 @@
       </div>
     </div>
   </footer>
-  <script src=".js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

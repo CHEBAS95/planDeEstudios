@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <title>Pilas y colas</title>
+</head>
+
+<body>
+  <header>
+    <h1>Tutorial y exercises of pogramming</h1>
+    <br>
+    <div id="header">
+      <ul>
+        <li><button><a href="index.html">Listas y Colas</a></button></li>
+        <li><button><a href="parentesis.html">balanceo de parentesis</a></button></li>
+        <li></li>
+      </ul>
+
+    </div>
+  </header>
+  <div class="container">
+    <h1>🔄 Stack y Queue Visualizer</h1>
+
+    <!-- Stack Section -->
+    <div class="section">
+      <h2>📚 Stack (LIFO - Last In, First Out)</h2>
+
+      <div class="controls">
+        <div class="input-group">
+          <input type="text" id="stackInput" placeholder="Ingresa un elemento..." />
+          <button class="add-btn" onclick="pushToStack()">Push</button>
+        </div>
+        <button class="remove-btn" onclick="popFromStack()">Pop</button>
+        <button class="info-btn" onclick="peekStack()">Peek</button>
+        <button class="clear-btn" onclick="clearStack()">Clear</button>
+      </div>
+
+      <div class="visualization" id="stackVisualization">
+        <div class="empty-state">Stack vacío - Añade elementos con Push</div>
+      </div>
+
+      <div class="info">
+        <h3>ℹ️ Información del Stack:</h3>
+        <p><strong>Tamaño:</strong> <span id="stackSize">0</span></p>
+        <p><strong>Vacío:</strong> <span id="stackEmpty">Sí</span></p>
+        <p><strong>Tope:</strong> <span id="stackTop">N/A</span></p>
+      </div>
+
+      <div class="console" id="stackConsole">
+        <div class="console-line">🚀 Stack Console - Listo para usar</div>
+      </div>
+    </div>
+
+    <!-- Queue Section -->
+    <div class="section">
+      <h2>🚶‍♂️ Queue (FIFO - First In, First Out)</h2>
+
+      <div class="controls">
+        <div class="input-group">
+          <input type="text" id="queueInput" placeholder="Ingresa un elemento..." />
+          <button class="add-btn" onclick="enqueueToQueue()">Enqueue</button>
+        </div>
+        <button class="remove-btn" onclick="dequeueFromQueue()">Dequeue</button>
+        <button class="info-btn" onclick="peekQueue()">Peek</button>
+        <button class="clear-btn" onclick="clearQueue()">Clear</button>
+      </div>
+
+      <div class="visualization" id="queueVisualization">
+        <div class="empty-state">Queue vacía - Añade elementos con Enqueue</div>
+      </div>
+
+      <div class="info">
+        <h3>ℹ️ Información de la Queue:</h3>
+        <p><strong>Tamaño:</strong> <span id="queueSize">0</span></p>
+        <p><strong>Vacía:</strong> <span id="queueEmpty">Sí</span></p>
+        <p><strong>Frente:</strong> <span id="queueFront">N/A</span></p>
+      </div>
+
+      <div class="console" id="queueConsole">
+        <div class="console-line">🚀 Queue Console - Listo para usar</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/arrays.js"></script>
+</body>
+
+</html>
