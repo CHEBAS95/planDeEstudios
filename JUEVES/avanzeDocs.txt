@@ -14,5 +14,7 @@ objetos lo basico :
 	1, 2, 3, 4, 5, 6, 7, 8,
 	ver explicacion de this , referencian al objeto y metodos
 	?. encademaniento opcional
-tipos de datos :1, 2, 3, 4, 5,6, 7,8 pendiente,9,10, 
+tipos de datos :1, 2, 3, 4, 5,6, 7,8 pendiente,9,10
+TRABAJO AVANZADO CON FUNCIONES
+1pendiente recurscion, 2, 
 	

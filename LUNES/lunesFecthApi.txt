@@ -16,3 +16,10 @@ Mejorar la funcion getDataPoke: actualmente solo muestra alertas, seria bueno qu
 Reutilizacion de codigo: la funcion createElement se encuentra dentro de la funcion getJoke, seria bueno que estuviera fuera para poder reutilizarla.
 Manejo de asincronia: la funcion getDataPoke no maneja la asincronia de la peticion a la api, seria bueno que lo hiciera.
 Accesibilidad: Asegúrate de que tu sitio web sea accesible para todos los usuarios, incluyendo aquellos con discapacidades. Esto implica usar etiquetas HTML semánticas, proporcionar texto alternativo para las imágenes y asegurarte de que el sitio web sea navegable con el teclado.
+
+
+authApi:
+-se inicializa el proyecto del servidor con npm init , luego se instala express y dotenv .
+- registro en la nasa para el api key 
+-api_key en ..env y en gitiognre se invluye para que no suba la repositorio.
+- instalacion de axios para peticiones http (error en la peticion)

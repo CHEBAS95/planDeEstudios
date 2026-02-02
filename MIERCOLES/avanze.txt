@@ -1,0 +1,2 @@
+-termianr clases de coche y con visaualisacion html
+-patrones de diseño

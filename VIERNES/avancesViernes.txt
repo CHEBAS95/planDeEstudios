@@ -14,4 +14,4 @@ flex : check
 	(ver video de flex con la baraja)
 
 
-video conexion js y base de dastos : https://www.youtube.com/watch?v=VgLOIocrNq8 1 min
+video conexion js y base de dastos : https://www.youtube.com/watch?v=VgLOIocrNq8 min 20
